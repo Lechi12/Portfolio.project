@@ -427,6 +427,98 @@ form .btn2{
 .copyright i{
     color:#ff004f;
 }
+/* If you want to target only the header in the portfolio page */
+/* Header styling */
+.portfolio-header {
+    padding-top: 20px;
+}
+
+.portfolio-header h1 {
+    margin-top: 20px;
+    margin-right: 30px;
+    padding-left: 30px; /* Shift the h1 element to the right */
+}
+
+/* Portfolio project container */
+.portfolio-project-container {
+    max-width: 600px; /* Adjust the width as needed */
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden; /* Ensures that the hover effect doesn’t go outside */
+}
+
+/* Image wrapper to control overflow */
+.portfolio-project-image-wrapper {
+    position: relative;
+    overflow: hidden; /* Ensures that image scaling doesn’t overflow */
+}
+
+/* Image styles */
+.portfolio-project-image {
+    width: 100%; /* Make image responsive to its container */
+    max-width: 400px; /* Limit the max width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    transition: transform 0.5s ease-in-out; /* Smooth zoom-in effect */
+}
+
+/* Hover effect: Zoom-in on image */
+.portfolio-project-container:hover .portfolio-project-image {
+    transform: scale(1.1); /* Zoom-in effect */
+}
+
+/* Overlay styles */
+.portfolio-project-details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.6), #ff004f); /* Semi-transparent overlay */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0; /* Start with overlay hidden */
+    transition: opacity 0.5s ease; /* Smooth fade-in effect */
+    padding: 20px;
+}
+
+/* Show overlay on hover */
+.portfolio-project-container:hover .portfolio-project-details {
+    opacity: 1; /* Show overlay on hover */
+}
+
+/* Styling for overlay text and link */
+.portfolio-project-details h3 {
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.portfolio-project-details p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #fff;
+    line-height: 1.4;
+}
+
+.portfolio-project-details a {
+    margin-top: 20px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+
 
 /*--------------------------css for small screens----------------*/
 
